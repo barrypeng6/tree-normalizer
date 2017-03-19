@@ -1,0 +1,24 @@
+{
+  "name": "tree-normalizer",
+  "version": "0.4.4",
+  "description": "Object tree normalizer (es6)",
+  "main": "tree-normalizer.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint src; exit 0"
+  },
+  "author": "Barry_Peng barrypeng6@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0"
+  }
+}
