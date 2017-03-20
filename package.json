@@ -1,6 +1,6 @@
 {
   "name": "tree-normalizer",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Object tree normalizer",
   "main": "lib/app.js",
   "scripts": {
