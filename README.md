@@ -1,5 +1,5 @@
 # tree-normalizer
-Object tree normalizer (transform structure of the tree) 
+Object tree normalizer (transform structure of the tree)
 
 ## Installation
 ```$ npm install tree-normalizer```

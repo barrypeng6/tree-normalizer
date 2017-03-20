@@ -47,9 +47,10 @@ function constructObj(data, schema, parent) {
   return node;
 }
 
-
-export function normalizer(input, schema) {
+function normalizer(input, schema) {
   const leaf = destructObj(input);
   const output = constructObj(leaf, schema, null);
   return output;
 }
+
+module.exports = normalizer;
