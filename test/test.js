@@ -1,4 +1,4 @@
-const normalizer = require("../src");
+const normalizer = require("../lib/app");
 const assert = require('assert');
 
 console.log('test-1 starting');

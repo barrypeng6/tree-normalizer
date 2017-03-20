@@ -4,7 +4,9 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'lib')
+    path: path.resolve(__dirname, 'lib'),
+    library: 'normalizer',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
