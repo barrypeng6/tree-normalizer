@@ -9,7 +9,7 @@ const schema_1 = [
   { key: 'index', parent: null },
   { key: 'create', parent: 'user' },
   { key: 'update', parent: 'user' },
-  { key: 'delete', parent: 'user' }
+  { key: 'delete', parent: null }
 ];
 
 // input example
@@ -18,19 +18,37 @@ const data_1 = {
     index: true,
     create: true,
     update: true,
-    delete: true
+    delete: [
+      {
+        id: 1,
+        age: {k:12, b: 0}
+      },
+      {
+        idx: 2,
+        agex: 12
+      }
+    ]
   }
 };
 
 const actual_1 = normalizer(data_1, schema_1);
 
 const expect_1 = {
-  "user": {
-    "create": true,
-    "update": true,
-    "delete": true
+  user: {
+    create: true,
+    update: true
   },
-  "index": true
+  index: true,
+  delete: [
+    {
+      id: 1,
+      age: {k:12, b: 0}
+    },
+    {
+      idx: 2,
+      agex: 12
+    }
+  ]
 }
 
 assert.deepStrictEqual(actual_1, expect_1);

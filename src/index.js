@@ -1,4 +1,3 @@
-
 function treeTolist(arr, data) {
   const KEY = 0;
   const VALUE = 1;
@@ -9,7 +8,7 @@ function treeTolist(arr, data) {
   }
 
   arrObj.forEach((e) => {
-    if (typeof e[VALUE] === 'object') {
+    if (Object.prototype.toString.call( e[VALUE] ) === '[object Object]') {
       treeTolist(arr, e[VALUE]);
     } else {
       arr.push([e[KEY], e[VALUE]]);
