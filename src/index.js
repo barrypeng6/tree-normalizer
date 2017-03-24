@@ -1,3 +1,18 @@
+function tf(obj) {
+  const arr = [];
+  tfr(arr, obj, null)
+  return arr;
+}
+
+function tfr(arr, obj, level) {
+  Object.keys(obj).forEach( e => {
+    arr.push({ 'key': e, 'parent': level })
+    if(Object.prototype.toString.call( obj[e] ) === '[object Object]') {
+      tfr(arr, obj[e], e)
+    }
+  })
+}
+
 function treeTolist(arr, data) {
   const KEY = 0;
   const VALUE = 1;
@@ -54,7 +69,8 @@ function constructObj(data, schema, parent) {
 
 function normalizer(input, schema) {
   const leaf = destructObj(input);
-  const output = constructObj(leaf, schema, null);
+  const tfschema = tf(schema);
+  const output = constructObj(leaf, tfschema, null);
   return output;
 }
 

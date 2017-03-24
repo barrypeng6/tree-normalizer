@@ -1,10 +1,11 @@
 {
   "name": "tree-normalizer",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "description": "Object tree normalizer",
   "main": "lib/app.js",
   "scripts": {
-    "build": "rimraf ./lib && webpack --config webpack.config.js"
+    "build": "rimraf ./lib && webpack --config webpack.config.js",
+    "test": "node test/test.js"
   },
   "files": [
     "lib",
