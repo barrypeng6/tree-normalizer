@@ -18,14 +18,14 @@ user {                            user {
 }                                 index: value
 ```
 ```
-import {normalizer} from 'tree-normalizer';
+import normalizer from 'tree-normalizer';
 
 const output = normalizer(input, schema);
 ```
 
 ## Example
 ```
-import {normalizer} from 'tree-normalizer';
+import normalizer from 'tree-normalizer';
 
 // schema example
 const schema = {
